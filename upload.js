@@ -50,6 +50,8 @@ async function objectExists(key) {
 // Upload a single file to S3, return both the S3 URI and the object URL
 async function uploadFile(fileName) {
   const filePath = path.join(INPUT_DIR, fileName);
+
+  //async read the file
   const body = fs.readFileSync(filePath);
   const contentType = mime.lookup(filePath) || 'application/octet-stream';
   const key = `${FOLDER}/${fileName}`;

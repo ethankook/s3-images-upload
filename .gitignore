@@ -1,0 +1,8 @@
+# Environment & Dependencies
+.env
+node_modules/
+
+# Results
+upload-results.csv 
+
+
